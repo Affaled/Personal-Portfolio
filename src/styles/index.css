@@ -19,6 +19,12 @@ body {
   color: var(--text-color);
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --font-title: "Instrument Serif", serif;
   --font-text: "Montserrat", sans-serif;
