@@ -1,0 +1,11 @@
+@use "../utils/" as u;
+@use "../global/" as g;
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: u.rem(88) 1fr;
+
+  width: 100vw;
+  height: 100vh;
+}
