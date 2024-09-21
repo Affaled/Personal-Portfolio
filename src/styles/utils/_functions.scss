@@ -8,7 +8,7 @@
   }
 }
 
-@function rem($pixels) {
+@function em($pixels) {
   @if math.is-unitless($pixels) {
     @return math.div($pixels, 16) * 1em;
   } @else {
