@@ -1,10 +1,26 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import postcss from "rollup-plugin-postcss";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  css: {
-    devSourcemap: true,
-  },
+  plugins: [
+    vue(),
+    {
+      ...postcss({
+        extract: true,
+        sourceMap: true,
+        extensions: [".css", ".scss"],
+        minimize: false,
+        use: [
+          [
+            "sass",
+            {
+              includePaths: ["./src/styles"],
+            },
+          ],
+        ],
+      }),
+      enforce: "post",
+    },
+  ],
 });
