@@ -1,0 +1,22 @@
+@mixin width($min-width, $width, $max-width) {
+  min-width: $min-width;
+  width: $width;
+  max-width: $max-width;
+}
+
+@mixin height($min-height, $height, $max-height) {
+  min-height: $min-height;
+  height: $height;
+  max-height: $max-height;
+}
+
+@mixin g-column($columns-start, $columns-end) {
+  grid-column-start: $columns-start;
+  grid-column-end: $columns-end;
+}
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
